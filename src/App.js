@@ -1,20 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectCard from "./components/ProjectCard";
-import NewProject from "./components/NewProject";
-
-const projects = [
-  {
-    title: "project title",
-    date: "project date",
-    description: "project description",
-  },
-
-  {
-    title: "project title",
-    date: "project date",
-    description: "project description",
-  },
-];
+import NewProject from "./pages/NewProject";
+import Nav from "./components/Nav";
+import mockProjects from "./data/projects.json";
+import { Switch, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -24,16 +14,15 @@ function App() {
         Research Home
       </h1>
 
-      {projects.map((project, i) => (
-        <ProjectCard
-          key={i}
-          title={project.title}
-          date={project.date}
-          description={project.description}
-        />
-      ))}
-
-      <NewProject />
+      <Nav />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/New Project">
+          <NewProject />
+        </Route>
+      </Switch>
     </>
   );
 }
