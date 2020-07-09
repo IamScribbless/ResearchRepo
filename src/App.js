@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import mockProjects from "./data/projects.json";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import PageLayout from "./components/PageLayout";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         Research Home
       </h1>
 
-      <Nav />
+      <PageLayout />
       <Switch>
         <Route exact path="/">
           <Home />
