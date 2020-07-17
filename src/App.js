@@ -4,7 +4,9 @@ import mockProjects from "./data/projects.json";
 import { Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import PageLayout from "./components/PageLayout";
-import ProjectDetails from "./components/ProjectDetails";
+import TopNav from "./components/TopNav";
+import FullReport from "./components/FullReport"; 
+import FullReports from "./pages/FullReports"; 
 
 function App() {
   const [projects, setProjects] = useState(mockProjects);
@@ -13,13 +15,10 @@ function App() {
     setProjects([...projects, project]);
   };
 
+
   return (
     <>
-      <h1 className="font-sans text-lg text-gray-800 text-left text-4xl ">
-        {" "}
-        Research Home
-      </h1>
-
+      <TopNav />
       <PageLayout>
         <Switch>
           <Route exact path="/">
@@ -27,6 +26,9 @@ function App() {
           </Route>
           <Route path="/New Project">
             <NewProject addProject={addProject} />
+          </Route>
+          <Route path="/FullReports">
+            <FullReports />
           </Route>
         </Switch>
       </PageLayout>

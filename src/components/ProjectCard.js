@@ -13,27 +13,31 @@ const tags = [
   },
 ];
 
-function ProjectCard({ title, date, description }) {
+function ProjectCard({ title, date, description, team, Tag }) {
   return (
-    <div className="flex content-center flex-col mx- px-4">
-      <div className="max-w-sm rounded overflow-hidden shadow-lg">
-        <div className="px-6 py-4">
-          <p className="font-bold text-gray-700 text-xl mb-2">{title}</p>
-        </div>
-        <div className="px-6">
-          <p className="font-bold text-gray-700 text-sm mb-2">{date}</p>
-        </div>
-        <div className="text-gray-700 text-base px-6 py-4">
+  
+    
+    <div className=" 4  bg-white hover:bg-gray-100 rounded-lg shadow-lg border-2 border-indigo-300 mb-3 ">
+      <div className="p-2">
+        <h3 className="font-semibold text-xl tracking-tight ml-1 text-gray-800 "> {title} </h3>
+        <p className="text-gray-600 text-sm"> {date} </p>
+        <div className="text-gray-600 text-base my-2 ">
           <p> {description} </p>
-        </div>
-        <div>
-          {tags.map((tag) => (
-            <Tag tagName={tag.name} />
-          ))}
+          <p className="text-gray-500 text-base my-2">
+             {team} </p>
+            
+    
         </div>
       </div>
     </div>
-  );
+  
+
+ 
+  
+
+);
 }
+
+ 
 
 export default ProjectCard;

@@ -1,13 +1,66 @@
 [
   {
-    "title": "project title",
-    "date": "project date",
-    "description": "project description"
+    "title": "Example Project #1: Here's A Great Research Project",
+    "date": "July 2020",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "team": "Stephan Kotin "
   },
 
   {
-    "title": "project title",
-    "date": "project date",
-    "description": "project description"
+    "title": "Example Project #2: Here's A Great Research Project",
+    "date": "May 2020",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "team": "Stephan Kotin"
+  },
+
+  {
+    "title": "Example Project #3: Here's A Great Research Project",
+    "date": "July 2020",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "team": "Stephan Kotin "
+  },
+
+  {
+    "title": "Example Project #4: Here's A Great Research Project",
+    "date": "May 2020",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "team": "Stephan Kotin"
+  },
+
+  {
+    "title": "Example Project #5: Here's A Great Research Project",
+    "date": "July 2020",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "team": "Stephan Kotin "
+  },
+
+  {
+    "title": "Example Project #6: Here's A Great Research Project",
+    "date": "May 2020",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "team": "Stephan Kotin"
+    
+  },
+
+  {
+    "title": "Example Project #7: Here's A Great Research Project",
+    "date": "July 2020",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "team": "Stephan Kotin "
+  },
+
+  {
+    "title": "Example Project #8: Here's A Great Research Project",
+    "date": "May 2020",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "team": "Stephan Kotin"
   }
+
+
+
+
+
+
+
 ]
+
