@@ -1,28 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 
-function NewProject() {
+function NewProject({ addProject }) {
+  // array destructuring
+  // 1. the typical way
+  const [projectName, setProjectName] = useState("");
+  const [projectDescription, setProjectDescription] = useState("");
+  // 2. another way
+  // const state = useState("");
+  // const [projectName, setProjectName] = state;
+  // 3. last way
+  //const state = useState("");
+  //const projectName = state[0];
+  //const setProjectName = state[1];
+
+  const handleSubmit = (event) => {
+    // use this to prevent page refresh
+    event.preventDefault();
+    addProject({
+      title: projectName,
+      description: projectDescription,
+    });
+  };
+
+  const handleProjectNameChange = (event) => {
+    console.log(event.target.value);
+    setProjectName(event.target.value);
+  };
+
+  const handleProjectDescriptionChange = (e) => {
+    setProjectDescription(e.target.value);
+    console.log(e.target.value);
+  };
+
   return (
-    <div className="container">
+    <form onSubmit={handleSubmit} className="container">
       <div className="font-bold text-gray-700 text-sm mb-2">
-        <p> Project Name</p>
+        <label htmlFor="project-name"> Project Name</label>
         <input
+          id="project-name"
           className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-          type="project_name"
+          type="text"
           placeholder="Name Of Project"
-        ></input>
+          onChange={handleProjectNameChange}
+          value={projectName}
+        />
       </div>
 
       <div className="font-bold text-gray-700 text-sm mb-2">
-        <p> Project Description</p>
+        <label> Project Description</label>
         <input
+          id="project-description"
           className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
-          type="project_description"
+          type="text"
           placeholder="Description Of Project"
-        ></input>
+          onChange={handleProjectDescriptionChange}
+          value={projectDescription}
+        />
       </div>
 
       <div className="font-bold text-gray-700 text-sm mb-2">
-        <p> Project Team</p>
+        <label> Project Team</label>
         <input
           className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="project_team"
@@ -31,14 +68,17 @@ function NewProject() {
       </div>
 
       <div className="font-bold text-gray-700 text-sm mb-2">
-        <p> Summary of Insights</p>
+        <label> Summary of Insights</label>
         <input
           className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal"
           type="project_team"
           placeholder="What are the top two-three learning from the research? "
         ></input>
       </div>
-    </div>
+      <button disabled={projectName === ""} type="submit">
+        Submit
+      </button>
+    </form>
   );
 }
 

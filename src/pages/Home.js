@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import SearchBar from "../components/SearchBar";
-import mockProjects from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard";
 
-function Home() {
-  const [projects] = useState(mockProjects);
+function Home({ projects }) {
   return (
-    <>
+    <div>
       <SearchBar />
       {projects.map((project, i) => (
         <ProjectCard
@@ -16,7 +14,7 @@ function Home() {
           description={project.description}
         />
       ))}
-    </>
+    </div>
   );
 }
 
