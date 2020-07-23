@@ -1,36 +1,46 @@
-import React from "react";
+import React from "react"; 
+import SearchBar from "./SearchBar"; 
 
-function FullReport({title, date, description, team}){
+function FullReport({title, date, description, team, keyinsight1, keyinsight2, keyinsight3, link1, link2, link3, method}){
   return (
-    <div className="container mx-auto my-6 ">
+
+
+    <div>
+      <div className = "container mx-auto mt-12">
+      
+      </div>
+      <div className="container mx-auto my-6 ">
     <div className=" flex flex-col">
     <div>
-      <p className="font-extrabold text-3xl">Project Title </p>
+      <p className="font-extrabold text-3xl">{title}</p>
     </div>
-
     <div className="m-4">
-      <p className="font-semibold text-xl"> Background </p> 
-      <p className="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      <p className="font-semibold text-xl"> Study Background  </p> 
+      <p className="">{description} </p>
+    </div>
+    <div>
+    <p className="font-semibold text-xl"> Method  </p> 
+      <p>
+      {method}
+      </p>
     </div>
     <div className="m-4">
       <p className="font-semibold text-xl"> Summary of Insights </p> 
       <ul className="list-disc ">
         <li>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-        sunt in culpa qui officia deserunt mollit anim id est laborum. 
+        {keyinsight1}
         </li>
         <li>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-        sunt in culpa qui officia deserunt mollit anim id est laborum. 
+        {keyinsight2}
         </li>
         <li>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-        sunt in culpa qui officia deserunt mollit anim id est laborum. 
+        {keyinsight3}
         </li>
         </ul>
     </div>
     <div className="m-4">
-    <h3 className=" font-semibold text-xl ">Data, Graphs, & Artifacts</h3>
+    <h3 className=" font-semibold text-xl ">Presentation Slides</h3>
+    {/* Still need to figure how to pipe in uploads from here */}
     <div class="flex flex-row">
   <div class="text-gray-700 text-center bg-gray-400 px-20 py-16 m-2">1</div>
   <div class="text-gray-700 text-center bg-gray-400 px-20 py-16 m-2">2</div>
@@ -41,32 +51,28 @@ function FullReport({title, date, description, team}){
 </div>
 
     <div className="m-4">
-      <p className="font-semibold text-xl"> Project Team </p> 
-      <ul>
-        <li className="text-gray-500">
-        Stephan Kotin
-        </li>
-        <li className="text-gray-500">
-        Shanna Licouris
-        </li>
-       
-        </ul>
+      <p className="font-semibold text-xl"> Team</p> 
+      <p> {team}</p>
     </div>
 
     <div className="m-4">
       <p className="font-semibold text-xl"> Links </p> 
       <ul>
         <li className="text-blue-500">
-        Link to full report
+        {link1}
         </li>
         <li className="text-blue-500">
-        Link to data set
+       {link2}
         </li>
         <li className="text-blue-500">
-        Link to video recordings
+        {link3}
         </li>
        
         </ul>
+        <br />
+        <hr />
+        
+    </div>
     </div>
     </div>
     </div>

@@ -1,10 +1,15 @@
 import React from "react";
 
-function SearchBar() {
+function SearchBar({handleSearchFilterChange, searchFilter}) {
   return (
-    <div className=" mb-5">
-      <input className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" type="text" placeholder="search" />
-    </div>
+    <form className=" mb-5">
+      <input 
+      className="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal" type="text" placeholder="search" 
+      onChange={handleSearchFilterChange}
+          value={searchFilter}
+          />
+    
+    </form>
   );
 }
 
