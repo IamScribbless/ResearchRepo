@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NewProject from "./pages/NewProject";
 import mockProjects from "./data/projects.json";
 import { Switch, Route } from "react-router-dom";
@@ -11,14 +11,31 @@ import SignIn from "./pages/SignIn";
 import Tools from "./pages/Tools";
 import Admin from "./pages/Admin";
 import ProjectCard from "./components/ProjectCard";
+import Landing from "./pages/Landing";
+import TaskList from "./components/TaskList";
+import InterviewForm from "./components/InterviewForm";
+import Flow from "./components/Flow"; 
+import NewStudy from "./pages/NewStudy"; 
+import GiveFeedback from "./pages/GiveFeedback";
+import BackButton from "./components/BackButton"; 
+import {writeProjectData, getProjects} from "./lib/projects";
+
 
 function App() {
-  const [projects, setProjects] = useState(mockProjects);
 
+ const [projects, setProjects] = useState();
+ 
+ 
   const addProject = (project) => {
-    setProjects([...projects, project]);
+    writeProjectData(project).then(response => {
+      getProjects().then(snapshot => {
+        const projects = Object.entries(snapshot.val() || {}).map(([key, value]) => {
+        return {id:key, ...value} 
+        })
+        setProjects(projects)
+      })
+    })
   };
-
 
   return (
     <>
@@ -31,17 +48,35 @@ function App() {
           <Route path="/New Project">
             <NewProject addProject={addProject} />
           </Route>
-          <Route path="/FullReports">
+          <Route path="/NewStudy">
+            <NewStudy/>
+          </Route>
+          <Route path="/FullReports/:id">
             <FullReports projects={projects}/>
           </Route>
           <Route path="/SignIn">
             <SignIn />
+          </Route>
+          <Route path="/Flow">
+            <Flow />
           </Route>
           <Route path="/Tools">
             <Tools />
           </Route>
           <Route path="/Admin">
             <Admin />
+          </Route>
+          <Route path="/Landing">
+            <Landing />
+          </Route>
+          <Route path="/TaskList">
+            <TaskList />
+          </Route>
+          <Route path="/InterviewForm">
+            <InterviewForm />
+          </Route>
+          <Route path="/GiveFeedback">
+            <GiveFeedback />
           </Route>
         </Switch>
       </PageLayout>

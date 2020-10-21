@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FileUpload from "../components/FileUpload";
+import BackButton from "../components/BackButton"; 
 
 function NewProject({ addProject }) {
   // array destructuring
@@ -95,6 +96,11 @@ function NewProject({ addProject }) {
   return (
     <form onSubmit={handleSubmit} className="container mx-auto my-6  ">
       <div className="my-4">
+      <BackButton /> 
+      <br />
+      <label htmlFor="StudyName" className="font-extrabold text-3xl"> New Study </label>
+      <hr />
+      <br />
       <h2 className="text-lg text-gray-700 font-semibold"> Study Information</h2>
       <p className=" italic text-sm text-gray-500 ">Please be as specific as possible</p>
       </div>

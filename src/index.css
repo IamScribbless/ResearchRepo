@@ -36,11 +36,90 @@ main {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-
+ .sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100; /* this is optional and should be different for every project */
+}
+.nav{
+  background-image: radial-gradient( circle 966px at 6.9% 10.8%,  rgba(92,123,237,1) 0%, rgba(147,186,252,1) 90% );
+}
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+.card {
+  background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234,249,249,0.67) 0.1%, rgba(239,249,251,0.63) 90.1% );
+}
+
+.redd {
+  text-color: #B51A1A;
+}
+
+.star-rating {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.star {
+  cursor: pointer;
+  width: 2em;
+  height: 2em;
+  background-color: grey;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    63% 38%,
+    100% 38%,
+    69% 59%,
+    82% 100%,
+    50% 75%,
+    18% 100%,
+    31% 59%,
+    0% 38%,
+    37% 38%
+  );
+  clip-path: polygon(
+    50% 0%,
+    63% 38%,
+    100% 38%,
+    69% 59%,
+    82% 100%,
+    50% 75%,
+    18% 100%,
+    31% 59%,
+    0% 38%,
+    37% 38%
+  );
+}
+
+.star.selected {
+  background-color: red;
+}
+
+
+.yellow {
+  background-color:#fbd46d;
+}
+
+.blue {
+ color: #33425b;
+}
+.background1{
+  background-color: #E3E3E3;
+}
+
+.navbackground{
+  background-color: #25283D;
+}
+.maincolor{
+  background-color: #25283D;
+}
+
+.bordermain{
+  border-color:#25283D;
+}
+
 
 /* Grouping content
    ========================================================================== */
@@ -2181,6 +2260,12 @@ video {
   background-color: rgba(42, 67, 101, var(--bg-opacity));
 }
 
+.bg-logo-100 {
+  --bg-opacity: 1;
+  background-color: #B2DFDB;
+  background-color: rgba(178, 223, 219 var(--bg-opacity));
+}
+
 .bg-indigo-100 {
   --bg-opacity: 1;
   background-color: #ebf4ff;
@@ -3947,9 +4032,14 @@ video {
   border-color: rgba(35, 78, 82, var(--border-opacity));
 }
 
-.border-blue-100 {
+.border-logo-100 {
   --border-opacity: 1;
   border-color: #ebf8ff;
+  border-color: rgba(178, 223, 219, var(--border-opacity));
+}
+.border-blue-100 {
+  --border-opacity: 1;
+  border-color: #B2DFDB;
   border-color: rgba(235, 248, 255, var(--border-opacity));
 }
 
@@ -13290,6 +13380,11 @@ video {
   color: rgba(255, 255, 255, var(--text-opacity));
 }
 
+.text-logo-100 {
+  --text-opacity: 1;
+  color: #B2DFDB;
+  color: rgba(178, 223, 219, var(--text-opacity));
+}
 .text-gray-100 {
   --text-opacity: 1;
   color: #f7fafc;
