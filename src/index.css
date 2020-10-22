@@ -112,6 +112,11 @@ h1 {
 .navbackground{
   background-color: #25283D;
 }
+
+.mainbordercolor{
+  border-color: #25283D;
+}
+
 .maincolor{
   background-color: #25283D;
 }

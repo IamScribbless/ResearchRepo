@@ -12,7 +12,7 @@ function TopNav() {
   <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div className="text-sm lg:flex-grow  ml-4">
     <Link to="/">
-    <span className=" text-logo-100 font-semibold text-xl tracking-tight mr-4  " >Research Home</span>
+    <span className=" text-logo-100 font-semibold text-xl tracking-tight mr-4  " >Research Vault</span>
     </Link>
       <Link to="/" className=" blue block mt-4 lg:inline-block lg:mt-0 text-white font-semibold   mr-4">My Library</Link>
       <Link to="/NewStudy" className=" blue block mt-4 lg:inline-block lg:mt-0 text-white font-semibold  mr-4">New Study</Link>
