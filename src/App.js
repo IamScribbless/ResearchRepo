@@ -9,7 +9,7 @@ import FullReport from "./components/FullReport";
 import FullReports from "./pages/FullReports"; 
 import SignIn from "./pages/SignIn";
 import Tools from "./pages/Tools";
-import Admin from "./pages/Admin";
+import Questions from "./pages/Questions";
 import ProjectCard from "./components/ProjectCard";
 import Landing from "./pages/Landing";
 import TaskList from "./components/TaskList";
@@ -63,8 +63,8 @@ function App() {
           <Route path="/Tools">
             <Tools />
           </Route>
-          <Route path="/Admin">
-            <Admin />
+          <Route path="/Questions">
+            <Questions />
           </Route>
           <Route path="/Landing">
             <Landing />

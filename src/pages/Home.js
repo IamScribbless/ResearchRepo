@@ -51,7 +51,7 @@ function Home({}) {
       <section className="flex justify-center">
         
         <ProjectFilter />
-        <div className="  mx-auto grid  grid-cols-1 gap-4  sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 pt-2">
+        <div className=" justify-self-auto mx-auto grid  grid-cols-1 gap-4  sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 pt-2">
           {filteredProjects.map(project => (
             <ProjectCard
               id={project.id}

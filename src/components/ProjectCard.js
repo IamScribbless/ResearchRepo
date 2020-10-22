@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function ProjectCard({ title, date, description, team, id }) {
   return (
     <Link to={`FullReports/${id}`}>
-      <div className=" flex items-baseline bg-white hover:bg-gray-100 rounded-lg shadow-lg border-2 border-gray-100  "
+      <div className=" flex justify-self-auto items-baseline bg-white hover:bg-gray-100 rounded-lg shadow-lg border-2 border-gray-100  "
       >
         <div className="p-4 mb-1  ">
           <h3 className="font-semibold text-xl tracking-tight text-black ">
