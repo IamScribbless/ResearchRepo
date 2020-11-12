@@ -11,7 +11,7 @@ function TopNav() {
               Research Vault
             </span>
           </Link>
-        <div className="flex justify-center text-xl lg:flex-grow lg:pl-48">
+        <div className="flex  text-xl lg:flex-grow lg:pl-8">
           
           <Link
             to="/"
@@ -19,14 +19,20 @@ function TopNav() {
           >
            Library
           </Link>
-         
+          
+          {/* <Link
+            to="/Flow"
+            className=" blue block mt-4 lg:inline-block lg:mt-0 text-white font-semibold   mr-4"
+          >
+           Projects
+          </Link> */}
         
-          <Link
+          {/* <Link
             to="/Questions"
             className="blue block mt-4 lg:inline-block lg:mt-0 text-white font-semibold   mr-4"
           >
             Insights
-          </Link>
+          </Link> */}
           {/* <Link to="/Landing" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Landing Page</Link>*/}
           {/* <Link to="/TaskList" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">Task List</Link> */}
         </div>

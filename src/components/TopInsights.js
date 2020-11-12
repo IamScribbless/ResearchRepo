@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import SearchBar from "../components/SearchBar";
+import { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard";
 import Filter from "../components/Filter";
 import { writeProjectData, getProjects } from "../lib/projects";
@@ -8,10 +9,9 @@ import ProjectFilter from "../components/ProjectFilter";
 import Welcome from "../components/Welcome";
 import TeamFeed from "../components/TeamFeed";
 import { Link } from "react-router-dom";
+import InsightCard from "../components/InsightCard";
 
-  
-
-function Home({}) {
+function TopInsights() {
   const [searchFilter, setSearchFilter] = useState("");
   const [projects, setProjects] = useState([]);
   const filteredProjects = projects.filter(project => {
@@ -20,12 +20,9 @@ function Home({}) {
       project.description.toLowerCase().includes(searchFilter)
     );
   });
-
-
-
   const handleSearchFilterChange = event => {
     setSearchFilter(event.target.value);
-  };
+  };  
 
   useEffect(() => {
     getProjects().then(snapshot => {
@@ -39,31 +36,26 @@ function Home({}) {
   }, []);
 
   return (
-    <div className=" container mx-auto flex flex-col my-0 mx-6">
-      <div>
-        <Welcome />
-      </div>
-      <section className= "flex flex-row">
-      <div className="w-5/6 mt-12 mb-3 mr-6 ml-48">
-        <SearchBar handleSearchFilterChange={handleSearchFilterChange} />
-      </div>
-      <div>
-      <Link to="/NewStudy"> <button className=" text-white w-max border bg-gray-800 border-gray-800 rounded-lg px-3 py-2 my-1 mt-2 text-md font-semibold  mt-12 mb-3 mr-6 hover hover:bg-gray-700 hvr-float" > New</button></Link>
-      </div>
-      </section>
-
+    <div className="container mx-auto p-32">
+      <seciton className="">
+        <h1 className="text-6xl"> Top Insights </h1>
+        <p className="text-xl ml-2"> </p>
+        <div className="mt-4">
+          <SearchBar handleSearchFilterChange={handleSearchFilterChange} />
+        </div>
+      </seciton>
       <section className="flex justify-center">
         
-        <ProjectFilter />
-        <div className="skeweffect justify-self-auto mx-auto grid  grid-cols-1 gap-4  sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 pt-2">
-          {filteredProjects.length === 0 ? <div> <h1>Test</h1> </div>:filteredProjects.map(project => (
-            <ProjectCard
+        <div className=" flex flex-col items-center justify-center">
+          {filteredProjects.map(project => (
+            <InsightCard
               id={project.id}
               key={project.id}
-              title={project.title}
               date={project.date}
               description={project.description}
-              team={project.team}
+              Q1={project.Q1}
+              Q2={project.Q2}
+              Q3={project.Q3}
             />
           ))}
         </div>
@@ -73,4 +65,4 @@ function Home({}) {
   );
 }
 
-export default Home;
+export default TopInsights;

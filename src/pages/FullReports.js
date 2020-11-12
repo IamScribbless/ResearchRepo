@@ -15,12 +15,9 @@ function FullReports({ projects }) {
   //   return project.title.toLowerCase().includes(searchFilter) || project.description.toLowerCase().includes(searchFilter)
   // });
 
-
   const handleSearchFilterChange = event => {
     setSearchFilter(event.target.value);
   };
-
-
 
   useEffect(() => {
     // get id for the current route
@@ -29,11 +26,10 @@ function FullReports({ projects }) {
     });
     setProject(project);
     console.log("effect is running");
-  }, []); 
+  }, []);
 
   console.log(params);
 
-  
   return (
     <div>
       <div className=" flex flex-col mx-24">

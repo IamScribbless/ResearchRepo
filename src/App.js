@@ -21,12 +21,15 @@ import BackButton from "./components/BackButton";
 import {writeProjectData, getProjects} from "./lib/projects";
 
 
+
+
 function App() {
 
  const [projects, setProjects] = useState();
  
  
   const addProject = (project) => {
+    console.log(project);
     writeProjectData(project).then(response => {
       getProjects().then(snapshot => {
         const projects = Object.entries(snapshot.val() || {}).map(([key, value]) => {
