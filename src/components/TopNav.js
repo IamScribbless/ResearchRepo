@@ -40,7 +40,7 @@ function TopNav() {
           <Feedback />
           <img
             className="w-10 h-10 rounded-full mr-4 border-solid border-4 mt-1"
-            src="https://pbs.twimg.com/profile_images/1248780370180538370/Ud6V-M1D_400x400.jpg "
+            src="https://scontent.faus1-1.fna.fbcdn.net/v/t1.0-9/97809761_10156816919551230_5948956109313146880_o.jpg?_nc_cat=105&ccb=2&_nc_sid=09cbfe&_nc_ohc=DjxJi_u_sdMAX-BJ6-x&_nc_ht=scontent.faus1-1.fna&oh=76e15aa74e143718278b8db927702601&oe=5FD1C837 "
             alt="Avatar"
           />
         </div>

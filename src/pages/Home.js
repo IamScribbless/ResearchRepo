@@ -8,6 +8,7 @@ import ProjectFilter from "../components/ProjectFilter";
 import Welcome from "../components/Welcome";
 import TeamFeed from "../components/TeamFeed";
 import { Link } from "react-router-dom";
+import NullProjectState from "../components/NullProjectState";
 
   
 
@@ -48,7 +49,7 @@ function Home({}) {
         <SearchBar handleSearchFilterChange={handleSearchFilterChange} />
       </div>
       <div>
-      <Link to="/NewStudy"> <button className=" text-white w-max border bg-gray-800 border-gray-800 rounded-lg px-3 py-2 my-1 mt-2 text-md font-semibold  mt-12 mb-3 mr-6 hover hover:bg-gray-700 hvr-float" > New</button></Link>
+      <Link to="/New Project"> <button className=" text-white w-max border bg-gray-800 border-gray-800 rounded-lg px-3 py-2 my-1 mt-2 text-md font-semibold  mt-12 mb-3 mr-6 hover hover:bg-gray-700 hvr-float" > New</button></Link>
       </div>
       </section>
 
@@ -56,7 +57,7 @@ function Home({}) {
         
         <ProjectFilter />
         <div className="skeweffect justify-self-auto mx-auto grid  grid-cols-1 gap-4  sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 pt-2">
-          {filteredProjects.length === 0 ? <div> <h1>Test</h1> </div>:filteredProjects.map(project => (
+          {filteredProjects.length === 0 ? <NullProjectState />:filteredProjects.map(project => (
             <ProjectCard
               id={project.id}
               key={project.id}
@@ -66,6 +67,7 @@ function Home({}) {
               team={project.team}
             />
           ))}
+          
         </div>
         
       </section>

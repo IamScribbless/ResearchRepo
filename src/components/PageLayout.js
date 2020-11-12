@@ -3,7 +3,7 @@ import React from "react";
 
 const PageLayout = ({ children }) => {
   return (
-      <div className=" background1 mx-auto ">
+      <div className=" container mx-auto ">
         {children}
       </div>
    

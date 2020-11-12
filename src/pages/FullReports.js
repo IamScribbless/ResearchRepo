@@ -32,10 +32,7 @@ function FullReports({ projects }) {
 
   return (
     <div>
-      <div className=" flex flex-col mx-24">
-        <div className="container mx-auto mt-4">
-          <SearchBar handleSearchFilterChange={handleSearchFilterChange} />
-        </div>
+      <div>
         {project && (
           <FullReport
             id={project.id}
@@ -48,9 +45,9 @@ function FullReports({ projects }) {
             keyinsight1={project.keyinsight1}
             keyinsight2={project.keyinsight2}
             keyinsight3={project.keyinsight3}
-            link1={project.link1}
-            link2={project.link2}
-            link3={project.link3}
+            Q1={project.Q1}
+            Q2={project.Q2}
+            Q3={project.Q3}
           />
         )}
 
